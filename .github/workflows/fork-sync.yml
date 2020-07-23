@@ -2,7 +2,7 @@ name: Sync Fork
 
 on:
   schedule:
-    - cron: '30 */2 * * *'
+    - cron: '31 */12 * * *'
   push:
     branches:
     - master
@@ -16,6 +16,5 @@ jobs:
       - uses: TG908/fork-sync@v1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: reruin
           base: master
           head: master
